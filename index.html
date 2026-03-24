@@ -11,38 +11,27 @@
 <body>
 
   <!-- NAV -->
-  <nav>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="nav-logo">
       <span></span>
       CHARLESON
     </div>
-
-    <ul class="nav-links">
-      <li><a href="#hero" class="active">Home</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#serve">About</a></li>
-      <li><a href="#partner">Partner</a></li>
-      <li><a href="#footer">Contact</a></li>
-    </ul>
-
-    <div class="nav-right">
-      <a href="#partner" class="btn-primary nav-cta">Get In Touch →</a>
-      <button class="mobile-nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"> <a class="nav-link active" aria-current="page" href="#">Home</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#">Services</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#">About</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#">Partner</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#">Contact</a> </li>
+        <a href="#partner" class="btn-primary" style="margin-top:8px; justify-content:center;">Get In Touch →</a>
+      </ul>
     </div>
-
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="#hero">Home</a>
-      <a href="#services">Services</a>
-      <a href="#serve">About</a>
-      <a href="#partner">Partner</a>
-      <a href="#footer">Contact</a>
-      <a href="#partner" class="btn-primary" style="margin-top:8px; justify-content:center;">Get In Touch →</a>
-    </div>
-  </nav>
+  </div>
+</nav>
 
   <!-- HERO -->
   <section id="hero">
