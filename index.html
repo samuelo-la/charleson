@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Charleson – Connectivity, Simplified</title>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
-  <style> <link rel="stylesheet" href="assets/css/styles.css"> </style>
-  <script src="assets/js/main.js"></script>
+  <link rel="stylesheet" href="assets/css/styles.css"/>
 </head>
 <body>
 
@@ -16,6 +15,9 @@
       <span></span>
       CHARLESON
     </div>
+
+    <button class="mobile-nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+
     <ul class="nav-links">
       <li><a href="#hero" class="active">Home</a></li>
       <li><a href="#services">Services</a></li>
@@ -23,6 +25,15 @@
       <li><a href="#partner">Partner</a></li>
       <li><a href="#footer">Contact</a></li>
     </ul>
+
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <a href="#hero">Home</a>
+      <a href="#services">Services</a>
+      <a href="#serve">About</a>
+      <a href="#partner">Partner</a>
+      <a href="#footer">Contact</a>
+    </div>
+
     <a href="#partner" class="btn-primary">Get In Touch →</a>
   </nav>
 
@@ -118,7 +129,7 @@
           </div>
           <div class="feature-card">
             <div class="feature-icon">📱</div>
-            <h4>eSIMs & APIs</h4>
+            <h4>eSIMs &amp; APIs</h4>
             <p>Modern SIM technology and developer-friendly APIs that simplify integration for any platform or business model.</p>
           </div>
           <div class="feature-card wide">
@@ -155,7 +166,7 @@
         <div class="bento-img">📡</div>
         <div class="bento-content">
           <div class="bento-badge">Core Infrastructure</div>
-          <h3>Telecom Devices & Accessories</h3>
+          <h3>Telecom Devices &amp; Accessories</h3>
           <p>We supply high-quality telecommunication devices and accessories sourced from trusted manufacturers, offered at competitive prices to retailers and businesses.</p>
           <a href="#partner" class="bento-link">Learn More →</a>
         </div>
@@ -177,7 +188,7 @@
 
       <div class="bento-card">
         <div class="bento-badge">Security</div>
-        <h3>NCC & NDPA Certified</h3>
+        <h3>NCC &amp; NDPA Certified</h3>
         <div class="big-num">100%</div>
         <p>Full regulatory compliance and certified operations you can trust.</p>
       </div>
@@ -234,7 +245,7 @@
           </div>
           <div class="serve-feature">
             <div class="icon">🔒</div>
-            <h4>Secure & Isolated</h4>
+            <h4>Secure &amp; Isolated</h4>
             <p>Isolated infrastructure designed to safeguard sensitive information and prevent cross-environment risks.</p>
             <a href="#partner" class="bento-link">More Information →</a>
           </div>
@@ -269,7 +280,7 @@
         <h2>Grow Your Business<br/>with <span>Charleson</span></h2>
         <p>With decades of proven performance, a well-established network, and a reputation for trustworthiness — we remain committed to powering connections and enabling growth at every level.</p>
         <ul class="benefit-list">
-          <li>Earn commissions by selling airtime & data</li>
+          <li>Earn commissions by selling airtime &amp; data</li>
           <li>Access our secure and easy-to-use platform</li>
           <li>Get support from our dedicated team</li>
           <li>Flexible partnership models to suit your business</li>
@@ -283,19 +294,27 @@
 
       <div class="partner-right">
         <h3>Start a Conversation</h3>
-        <div class="form-group">
-          <label>Your Name</label>
-          <input type="text" placeholder="e.g. Emeka Okafor"/>
-        </div>
-        <div class="form-group">
-          <label>Email / Phone</label>
-          <input type="text" placeholder="email or phone number"/>
-        </div>
-        <div class="form-group">
-          <label>Tell Us About Your Needs</label>
-          <textarea placeholder="Briefly describe how you'd like to work with us…"></textarea>
-        </div>
-        <a href="mailto:Charleson@gmail.com" class="btn-primary" style="width:100%; justify-content:center;">Send Message →</a>
+
+        <form method="POST" action="contact.php">
+          <input class="hp-field" type="text" name="company" tabindex="-1" autocomplete="off" />
+
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" name="name" placeholder="e.g. Emeka Okafor" required />
+          </div>
+          <div class="form-group">
+            <label>Email / Phone</label>
+            <input type="text" name="contact" placeholder="email or phone number" required />
+          </div>
+          <div class="form-group">
+            <label>Tell Us About Your Needs</label>
+            <textarea name="message" placeholder="Briefly describe how you'd like to work with us…" required></textarea>
+          </div>
+
+          <button class="btn-primary" type="submit" style="width:100%; justify-content:center;">Send Message →</button>
+        </form>
+
+        <p class="form-note">Or email us at <a href="mailto:admin@chalson.ng">admin@chalson.ng</a></p>
       </div>
     </div>
   </section>
@@ -317,7 +336,7 @@
         <ul>
           <li><a href="#">Airtime Distribution</a></li>
           <li><a href="#">Data Services</a></li>
-          <li><a href="#">eSIMs & APIs</a></li>
+          <li><a href="#">eSIMs &amp; APIs</a></li>
           <li><a href="#">Telecom Devices</a></li>
           <li><a href="#">Value Added Services</a></li>
         </ul>
@@ -330,7 +349,7 @@
           <li><a href="#">Our Footprint</a></li>
           <li><a href="#partner">Become a Partner</a></li>
           <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Terms &amp; Conditions</a></li>
         </ul>
       </div>
 
@@ -339,12 +358,12 @@
         <p>Subscribe to receive news, guides, and product updates from Charleson.</p>
         <div class="newsletter-input">
           <input type="email" placeholder="Email address"/>
-          <button>Subscribe Now</button>
+          <button type="button">Subscribe Now</button>
         </div>
         <div style="margin-top:20px; font-size:0.82rem; color:var(--text-muted);">
           📍 No 3 Onwuegbuzie Street<br/>
           📞 08104675377<br/>
-          ✉️ Charleson@gmail.com
+          ✉️ admin@chalson.ng
         </div>
       </div>
     </div>
@@ -356,10 +375,11 @@
         <a href="#">About</a>
         <a href="#">Contact</a>
         <a href="#">Privacy Policy</a>
-        <a href="#">Terms & Conditions</a>
+        <a href="#">Terms &amp; Conditions</a>
       </div>
     </div>
   </footer>
 
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
