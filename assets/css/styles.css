@@ -1,4 +1,83 @@
-.mobile-nav-toggle { /* styles for the toggle */ }
+/* ── MOBILE NAV TOGGLE ── */
+    .mobile-nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 6px;
+      flex-direction: column;
+      gap: 5px;
+      z-index: 101;
+    }
+
+    .mobile-nav-toggle .bar {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    .mobile-nav-toggle[aria-expanded="true"] .bar:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .mobile-nav-toggle[aria-expanded="true"] .bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    .mobile-nav-toggle[aria-expanded="true"] .bar:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* ── MOBILE MENU PANEL ── */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 65px;
+      left: 0;
+      right: 0;
+      background: rgba(8, 14, 14, 0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 24px;
+      flex-direction: column;
+      gap: 4px;
+      z-index: 99;
+    }
+
+    .mobile-menu.is-active {
+      display: flex;
+    }
+
+    .mobile-menu a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+      transition: color 0.2s;
+    }
+
+    .mobile-menu a:last-child {
+      border-bottom: none;
+    }
+
+    .mobile-menu a:hover { color: var(--mint); }
+
+    .mobile-menu .btn-primary {
+      margin-top: 12px;
+      text-align: center;
+      justify-content: center;
+      border-bottom: none;
+      color: var(--black);
+    }
+
+    .mobile-menu .btn-primary:hover { color: var(--black); }
 
  :root {
       --teal-dark: #0d4a4a;
@@ -967,6 +1046,8 @@
     @media (max-width: 900px) {
       nav { padding: 16px 24px; }
       .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .mobile-nav-toggle { display: flex; }
       section { padding: 70px 24px; }
       #hero { padding: 100px 24px 60px; grid-template-columns: 1fr; }
       .hero-right { grid-template-columns: 1fr 1fr; }
